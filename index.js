@@ -65,7 +65,7 @@ class ServerlessPlugin {
         const options = {
           cwd: path.join(servicePath, '.serverless'),
         };
-        const execPath = path.join(__dirname, '..', '.bin/babel');
+        let execPath = path.join(__dirname, '..', '.bin/babel');
         console.log('Babel Executable: ' + execPath);
         if (isWin) execPath += '.cmd';
         const result = spawnSync(execPath, args, options);
